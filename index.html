@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Ceevee - Free Responsive Form </title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Mobile Specific Metas
+   ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h2 class="Logo"> Book Store </h2>
+        <nav class="navegation">
+            <a href="#"> Home</a>
+            <a href="#"> About</a>
+            <a href="#"> Contact</a>
+            <a href="#"> Services</a>
+            <button class="btn"> Login</button>
+        </nav>
+    </header>
+    <div class="container">
+        <span class="close">
+            <ion-icon name="close"></ion-icon>
+        </span>
+        <div class="form1 login">
+            <h2> Login </h2>
+
+            <form action="#" name="form1" method="post" target="_self" onsubmit="return validate()">
+                <fieldset class="fieldset">
+                    <legend>sign-in</legend>
+                    <div class="input">
+                        <span class="icon">
+                            <ion-icon name="mail"></ion-icon>
+                        </span>
+                        <input type="email" name="fname" class="input-valid" minlength="7" min="5" max="232323"
+                            maxlength="20" required>
+                        <label>Email</label>
+
+
+                    </div>
+                    <div class="input">
+                        <span class="icon">
+                            <ion-icon name="lock-closed"></ion-icon>
+                        </span>
+                        <input type="password" name="fname" class="input-valid" minlength="7" min="5" max="232323"
+                            maxlength="20" required>
+                        <label class="pass">Password</label>
+                    </div>
+                    <div class="rem-for">
+                        <label><input type="checkbox"> Remember me</label>
+                        <a href="#"> Forget Password ?</a>
+                    </div>
+                    <div class="buttons">
+                        <button type="submit" class="sub-btn">Login </button>
+                        <button type="reset" class="sub-btn">Reset </button>
+                    </div>
+
+                    <div class="login-reg">
+                        <p>Don't have any account?</p>
+                        <a href="#" class="register-link"> Register</a>
+
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="form2 Register">
+            <h2> Register </h2>
+            <form action="#" name="form2" method="post" target="_blank" onsubmit="return validate()">
+                <div class="input">
+                    <span class="icon">
+                        <ion-icon name="person"></ion-icon>
+                    </span>
+                    <input type="text" name="fname" class="input-valid" minlength="7" maxlength="20" min="5"
+                        max="232323" required>
+                    <label>User name</label>
+
+
+                </div>
+                <div class="input">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input type="email" name="fname" class="input-valid" minlength="7" maxlength="20" min="5"
+                        max="232323" required>
+                    <label>Email</label>
+
+
+                </div>
+                <div class="input">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" name="fname" class="input-valid" minlength="7" maxlength="20" min="5"
+                        max="232323" required>
+                    <label class="pass">Password</label>
+                </div>
+                <div class="rem-for">
+                    <label><input type="checkbox"> I agree to terms & conditions</label>
+
+                </div>
+
+
+                <div class="radio">
+                    <p>gender:</p>
+                    <input type="radio" id="mal" name="male" value="male">
+                    <label for="mal">male</label><br>
+                    <input type="radio" id="fem" name="female" value="female">
+                    <label for="fem">female</label><br>
+                </div>
+
+                <div class="datalist">
+                    <label for="book" class="labdata">Choose your fav book:</label>
+                    <input list="books" name="book" id="book">
+                    <datalist id="books" class="data">
+                        <option value="poetry">
+                        <option value="science fiction">
+                        <option value="romance">
+                        <option value="historical fiction">
+                        <option value="crime&mystery">
+                    </datalist>
+                </div>
+                <div class="book-languages">
+                    <label for="book-lang" class="labdata">Choose book lang:</label>
+                    <select name="cars" id="book-lang">
+                        <optgroup label="English-books">
+                            <option value="Charlotte's Web – E.B. White">Charlotte's Web </option>
+                            <option value="Mieko and the Fifth Treasure – Eleanor Coerr.">Mieko and the Fifth Treasure
+                            </option>
+                        </optgroup>
+                        <optgroup label="French-books">
+                            <option value="Madame Bovary">Madame Bovary</option>
+                            <option value="Les Misérables">Les Misérables</option>
+                        </optgroup>
+                        <optgroup label="Germany-books">
+                            <option value="Der Tod in Venedig">Der Tod in Venedig</option>
+                            <option value="Tintenherz, Cornelia Funke. ..">Tintenherz, Cornelia Funke. ..</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="buttons">
+                    <button type="submit" class="sub-btn">Login </button>
+                    <button type="reset" class="sub-btn">Reset </button>
+                </div>
+                <div class="login-reg">
+                    <p>Already have an account?</p>
+                    <a href="#" class="login-link"> Login</a>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="main.js"> </script>
+
+</body>
+
+</html>

@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Raleway:ital,wght@0,300;0,400;1,300;1,400&family=Roboto+Mono:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Raleway:ital,wght@0,300;0,400;1,300;1,400&family=Roboto+Mono:ital,wght@1,300&family=Roboto+Slab:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto Slab;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+
+}
+
+.fieldset {
+    width: 347px;
+    height: 375px;
+    padding: 10px 30px 10px 15px;
+
+}
+
+legend {
+    font-size: 1rem;
+    color: whitesmoke;
+    text-shadow: 2px 2px black;
+}
+
+
+.Logo {
+    font-size: 2rem;
+    color: whitesmoke;
+    text-shadow: 2px 2px black;
+}
+
+.navegation a {
+    position: relative;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px black;
+    color: whitesmoke;
+    text-decoration: none;
+    margin-left: 40px;
+    font-weight: 500px;
+
+}
+
+.navegation a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: whitesmoke;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+
+
+}
+
+.navegation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+
+}
+
+
+.radio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    color: whitesmoke;
+    font-size: 1.1rem;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.datalist,
+.book-languages {
+    padding-left: 20px;
+    padding-bottom: 30px;
+
+}
+
+.labdata {
+
+    color: whitesmoke;
+    font-size: 1.1rem;
+    text-shadow: 2px 2px black;
+    border: none;
+    padding-right: 10px;
+}
+
+.book input:focus~.labdata {
+    border: none;
+}
+
+
+
+.navegation .btn {
+    background-color: transparent;
+    width: 130px;
+    height: 50px;
+    border: 2px solid whitesmoke;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: whitesmoke;
+    font-weight: 500;
+    margin-left: 30px;
+    transition: 0.5s;
+    font-weight: 500px;
+
+}
+
+.btn:hover {
+    background: whitesmoke;
+    color: black;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("8.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    position: relative;
+    width: 500px;
+    height: 450px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(255, 255, 255, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform .5s ease, height .2s ease;
+
+}
+
+.container.active {
+    margin-top: 50px;
+    height: 530px;
+
+}
+
+.container.active-btn {
+    transform: scale(1);
+}
+
+.container .form1 {
+    width: 100%;
+    padding: 70px;
+    margin-right: 40px;
+    border-width: 10px;
+
+
+}
+
+.container .form1.login {
+    transition: transform .18s ease;
+    transform: translateX(0);
+
+}
+
+
+
+.container.active .form1.login {
+    transition: none;
+    transform: translateX(-400px);
+}
+
+
+
+.container .form2.Register {
+    position: absolute;
+    transform: translateX(500px);
+    transition: none;
+
+}
+
+.container.active .form2.Register {
+    transition: transform .18s ease;
+    transform: translateX(0);
+
+}
+
+.container .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: rgb(68, 66, 66);
+    font-size: 1.1em;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+
+
+}
+
+.form1 h2,
+.form2 h2 {
+    font-size: 2em;
+    color: whitesmoke;
+    text-align: center;
+    text-shadow: 1px 1px black;
+
+
+}
+
+.input {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1.5px solid whitesmoke;
+    margin: 0px 15px;
+
+}
+
+.input label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: whitesmoke;
+    font-weight: 500;
+    pointer-events: none;
+    transition: 0.5s;
+    text-shadow: 1px 1px black;
+
+}
+
+
+
+.input input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: whitesmoke;
+    font-size: 1em;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+
+
+}
+
+.input input:focus~label,
+.input input:valid~label {
+    top: -5px;
+
+}
+
+.input .icon {
+    position: absolute;
+    right: 9px;
+    /*bottom: 5px;*/
+    font-size: 1.4em;
+    color: whitesmoke;
+    line-height: 57px;
+}
+
+.rem-for {
+    font-size: 1.1em;
+    color: whitesmoke;
+    font-weight: 500;
+    margin: 20px 0 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    text-shadow: 1px 1px black;
+
+}
+
+.rem-for label input {
+    accent-color: black;
+}
+
+.rem-for a {
+    color: whitesmoke;
+    text-decoration: none;
+    text-shadow: 1px 1px black;
+
+}
+
+.rem-for a:hover {
+    text-decoration: underline;
+}
+
+.sub-btn {
+    width: 100%;
+    height: 56px;
+    background-color: rgb(26, 25, 25);
+    text-shadow: 1px 1px black;
+    color: whitesmoke;
+    outline: none;
+    border: none;
+    border-radius: 9px;
+    font-size: 1.1em;
+    margin-left: 15px;
+    font-weight: 500;
+}
+
+.login-reg {
+    font-size: 1.1em;
+    color: whitesmoke;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.login-reg a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 30px;
+    text-shadow: 1px 1px black;
+}
+
+.login-reg p {
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 15px;
+    text-shadow: 1px 1px black;
+}
+
+.login-reg a:hover {
+    text-decoration: underline;
+
+}

@@ -1,0 +1,2 @@
+We have 2 forms:
+Login & Register each form contain different tags so please don't forget to press on login form and fill it then press on register at the bottom of login form 
